@@ -33,7 +33,7 @@
   "eslintConfig": {
     "extends": "nw-react-app"
   },
-  "manifestUrl": "http://localhost:3000/api/release/manifest",
+  "manifestUrl": "https://fierce-sierra-99883.herokuapp.com/api/release/manifest",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -47,20 +47,32 @@
     ]
   },
   "main": "index.html",
-  "nwBuilder": {
-    "//": "https://github.com/nwjs-community/nw-builder",
-    "platforms": [
-      "osx64",
-      "win32",
-      "win64"
-    ],
-    "version": "latest",
-    "flavor": "sdk",
-    "buildDir": "./build",
-    "cacheDir": "./cache",
-    "macIcns": "./src/logo.icns"
-  },
   "devDependencies": {
     "yarn-audit-fix": "^3.2.12"
+  },
+  "nwjs-packager": {
+    "nwVersion": "latest",
+    "appFriendlyName": "Confidence Monitor",
+    "appVersion": "2.0.0",
+    "appPackageName": "Confidence Monitor",
+    "appDescription": "Confidence app with timer and NDI support",
+    "appCopyright": "YGS Church 2020, Kiev, Ukraine",
+    "appMacIcon": "../nw/app.icns",
+    "files": [
+      "static/**",
+      "index.html",
+      "logo.png",
+      "favicon.ico",
+      "updater.js"
+    ],
+    "outputDir": "build_nw/packager",
+    "infoPlistStrings": {
+      "default": "../nw/InfoPlist.strings"
+    },
+    "builds": {
+      "osx": {
+        "zip": true
+      }
+    }
   }
 }
