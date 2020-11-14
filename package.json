@@ -1,24 +1,39 @@
 {
   "name": "confidence-nwjs",
+  "appName": "Confidence Monitor NDI",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fingerprintjs/fingerprintjs": "^3.0.3",
+    "@material-ui/core": "^4.11.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/socket.io-client": "^1.4.34",
+    "axios": "^0.21.0",
+    "dayjs": "^1.9.6",
+    "nw-autoupdater": "^1.1.11",
     "nw-react-scripts": "3.4.1",
+    "nwjs-packager": "^1.4.10",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "react-reveal": "^1.2.2",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "socket.io-client": "^2.0.1"
   },
   "scripts": {
     "start": "nw-react-scripts start",
     "build": "nw-react-scripts build",
     "test": "nw-react-scripts test",
-    "eject": "nw-react-scripts eject"
+    "eject": "nw-react-scripts eject",
+    "audit:fix": "yarn-audit-fix --force"
   },
   "eslintConfig": {
     "extends": "nw-react-app"
   },
+  "manifestUrl": "http://localhost:3000/api/release/manifest",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -40,9 +55,12 @@
       "win64"
     ],
     "version": "latest",
-    "flavor": "normal",
+    "flavor": "sdk",
     "buildDir": "./build",
     "cacheDir": "./cache",
     "macIcns": "./src/logo.icns"
+  },
+  "devDependencies": {
+    "yarn-audit-fix": "^3.2.12"
   }
 }

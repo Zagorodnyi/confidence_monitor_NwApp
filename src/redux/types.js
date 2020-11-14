@@ -1,0 +1,10 @@
+export const GET_SETTINGS = 'GET_SETTINGS'
+
+export const SET_DEVICELIST = 'SET_DEVICELIST'
+export const SET_DEVICE_ID = 'SET_DEVICE_ID'
+export const SET_SOCKET_ID = 'SET_SOCKET_ID'
+export const SET_LAYOUT = 'SET_LAYOUT'
+export const SET_NAME = 'SET_NAME'
+export const SET_DATE = 'SET_DATE'
+export const SET_SCALE = 'SET_SCALE'
+export const SET_CURRENTDEVICE = 'SET_CURRENTDEVICE'
