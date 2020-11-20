@@ -1,9 +1,9 @@
-import Autoupdate from 'nw-autoupdater'
+import Autoupdate from '@zagorodnyi/nw-autoupdater'
 import img from './Img/logo.png'
 
 export default async () => {
     const updater = new Autoupdate(require('../package.json'), {
-        strategy: "ScriptSwap",
+        strategy: "CodeSwap",
     })
 
     try {

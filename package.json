@@ -1,7 +1,7 @@
 {
   "name": "confidence-nwjs",
   "appName": "Confidence Monitor NDI",
-  "version": "0.1.0",
+  "version": "2.5.0",
   "private": true,
   "dependencies": {
     "@fingerprintjs/fingerprintjs": "^3.0.3",
@@ -10,6 +10,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@types/socket.io-client": "^1.4.34",
+    "@zagorodnyi/nw-autoupdater": "^1.0.0",
     "axios": "^0.21.0",
     "dayjs": "^1.9.6",
     "nw-autoupdater": "^1.1.11",
@@ -51,9 +52,10 @@
     "yarn-audit-fix": "^3.2.12"
   },
   "nwjs-packager": {
-    "nwVersion": "latest",
+    "nwVersion": "0.49.2",
+    "nwFlavor": "normal",
     "appFriendlyName": "Confidence Monitor",
-    "appVersion": "2.0.0",
+    "appVersion": "2.5.0",
     "appPackageName": "Confidence Monitor",
     "appDescription": "Confidence app with timer and NDI support",
     "appCopyright": "YGS Church 2020, Kiev, Ukraine",
@@ -65,7 +67,7 @@
       "favicon.ico",
       "updater.js"
     ],
-    "outputDir": "build_nw/packager",
+    "outputDir": "./App",
     "infoPlistStrings": {
       "default": "../nw/InfoPlist.strings"
     },
